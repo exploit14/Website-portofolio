@@ -1,0 +1,280 @@
+/* =========================================
+   RESET & VARIABEL WARNA (DARK THEME FIX)
+   ========================================= */
+:root {
+    /* Warna Utama: Hitam Pekat */
+    --bg-color: #050505;       
+    
+    /* Warna Kartu: Hitam sedikit terang */
+    --card-bg: #121212;        
+    
+    /* Warna Aksen: Hijau Neon (Hacker) */
+    --primary: #00ff88;        
+    
+    /* Warna Teks */
+    --text-main: #ffffff;
+    --text-sec: #b3b3b3;
+    
+    /* Border Neon Tipis */
+    --glass-border: 1px solid rgba(0, 255, 136, 0.2); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* MEMAKSA BACKGROUND HITAM */
+body {
+    background-color: var(--bg-color) !important; /* Paksa Hitam */
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Scrollbar Kustom (Warna Hijau) */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+
+/* =========================================
+   NAVIGASI (MENU ATAS)
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: fixed;
+    width: 100%;
+    /* Background Menu Gelap Transparan */
+    background: rgba(5, 5, 5, 0.95); 
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+.dot { color: var(--primary); }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 30px; }
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* Teks Menu Putih */
+    font-size: 0.9rem;
+    font-family: 'Fira Code', monospace;
+    transition: 0.3s;
+}
+.nav-links a:hover { color: var(--primary); }
+
+/* Burger Menu (HP) */
+.burger { display: none; cursor: pointer; }
+.burger div { width: 25px; height: 3px; background-color: var(--primary); margin: 5px; transition: 0.3s; }
+
+/* =========================================
+   HERO SECTION (HALAMAN UTAMA)
+   ========================================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10% 0;
+    flex-wrap: wrap-reverse;
+}
+
+.hero-content { flex: 1; padding-right: 20px; min-width: 300px; }
+
+.greeting { 
+    color: var(--primary); 
+    font-family: 'Fira Code', monospace; 
+    margin-bottom: 10px; 
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    color: #fff; /* Pastikan Judul Putih */
+}
+
+.dynamic-text {
+    font-size: 1.5rem;
+    color: var(--text-sec);
+    margin-bottom: 20px;
+    font-family: 'Fira Code', monospace;
+}
+.highlight { color: var(--primary); }
+
+.description {
+    color: #ccc; /* Teks abu-abu terang */
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* Tombol Sosial Media */
+.social-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+.btn-icon {
+    padding: 10px 20px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+    border-radius: 4px;
+    transition: 0.3s;
+    display: flex; align-items: center; gap: 8px;
+    background: transparent;
+}
+.btn-icon:hover {
+    background: var(--primary);
+    color: #000; /* Teks jadi hitam saat di-hover */
+    box-shadow: 0 0 15px var(--primary);
+}
+
+/* Foto Profil */
+.hero-visual { flex: 1; display: flex; justify-content: center; align-items: center; min-width: 300px; }
+.profile-wrapper { position: relative; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center; }
+.profile-img { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 3px solid #111; position: relative; z-index: 2; }
+.neon-ring { 
+    position: absolute; width: 300px; height: 300px; border-radius: 50%; 
+    border: 2px solid var(--primary); 
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+    z-index: 1; animation: pulse 3s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* =========================================
+   SECTIONS UMUM
+   ========================================= */
+.section { padding: 80px 10%; }
+.section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; color: #fff; }
+.section-title::after { content:''; display: block; width: 60px; height: 3px; background: var(--primary); margin: 10px auto; }
+
+/* Glass Effect (Hitam Transparan) */
+.glass {
+    background: rgba(255, 255, 255, 0.03); /* Transparan sangat tipis */
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.about-text p { color: #dcdcdc; line-height: 1.8; text-align: justify; }
+
+/* =========================================
+   SKILLS & CERTIFICATES (CARD STYLE)
+   ========================================= */
+.skills-grid, .cert-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+}
+
+.skill-card, .cert-card {
+    background-color: var(--card-bg); /* Background KARTU HITAM */
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-card h3, .cert-card h3 { color: #fff; margin: 10px 0; }
+.skill-card p, .cert-card p { color: #aaa; font-size: 0.9rem; }
+
+/* Hover Effect */
+.skill-card:hover, .cert-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.skill-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+
+/* Gambar Sertifikat */
+.cert-img-box { width: 100%; height: 180px; overflow: hidden; border-radius: 5px; margin-bottom: 15px; }
+.cert-img-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.cert-card:hover img { transform: scale(1.1); }
+
+/* Progress Bar */
+.progress-bar { background: #333; height: 5px; width: 100%; border-radius: 3px; overflow: hidden; margin-top: 10px;}
+.progress { height: 100%; background: var(--primary); box-shadow: 0 0 10px var(--primary); }
+
+/* =========================================
+   CONTACT & FOOTER
+   ========================================= */
+.contact-buttons-large { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.btn-big {
+    padding: 15px 40px;
+    background: #111;
+    border: 1px solid var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex; align-items: center; gap: 10px;
+    transition: 0.3s;
+}
+.btn-big:hover { background: var(--primary); color: #000; }
+
+footer { text-align: center; padding: 40px; border-top: 1px solid #222; color: #777; margin-top: 50px; }
+
+/* =========================================
+   RESPONSIVE (ANDROID/HP)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* Menu HP Slide */
+    .burger { display: block; z-index: 1001; }
+    
+    .nav-links {
+        position: fixed; right: 0; top: 0; height: 100vh; width: 70%;
+        background-color: #000; /* Background Menu HP Hitam */
+        flex-direction: column; align-items: center; justify-content: center;
+        transform: translateX(100%); transition: 0.4s ease-in-out;
+        border-left: 1px solid #333;
+    }
+    .nav-links li { margin: 25px 0; opacity: 0; }
+    
+    .nav-active { transform: translateX(0%); }
+    
+    /* Animasi Link */
+    @keyframes navLinkFade {
+        from { opacity: 0; transform: translateX(50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Layout HP */
+    .hero { text-align: center; padding-top: 120px; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .social-buttons { justify-content: center; }
+    
+    /* Profile di atas teks */
+    .hero-content { order: 2; padding: 0; }
+    .hero-visual { order: 1; margin-bottom: 40px; }
+    
+    .profile-wrapper { width: 220px; height: 220px; }
+    .profile-img { width: 200px; height: 200px; }
+    .neon-ring { width: 220px; height: 220px; }
+}
+
+/* Animasi Burger X */
+.toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
+.toggle .line2 { opacity: 0; }
+.toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
+
+/* Animasi Scroll (Hidden) */
+.hidden { opacity: 0; transform: translateY(50px); transition: all 1s ease; }
+.show { opacity: 1; transform: translateY(0); }

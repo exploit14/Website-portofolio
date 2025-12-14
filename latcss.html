@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum CSS Lengkap (Sesi 1 - 4)</title>
+    
+    <link rel="stylesheet" href="css1.css">
+
+    <style>
+        /* Mengatur latar belakang halaman */
+        body { 
+            background-color: #f0f0f0; 
+        }
+
+        /* Skenario Uji Konflik: Internal CSS memberi warna Ungu */
+        a.konflik { 
+            color: purple; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Selamat Datang di Praktikum CSS</h1>
+
+    <p style="color: blue;">Ini adalah paragraf untuk percobaan Inline CSS.</p>
+
+    <a href="#">Ini adalah link biasa.</a>
+    
+    <br><br>
+
+    <a href="#" class="konflik" style="color: black;">Ini adalah link Uji Konflik (Cek Prioritas).</a>
+
+    <hr>
+
+    <h1 id="main-title">Judul Utama Proyek Saya (Sesi 2)</h1>
+    
+    <p>Ini adalah paragraf pertama yang akan diatur melalui Element Selector.</p>
+    
+    <p class="highlight">Paragraf ini penting! Kita akan menargetkannya dengan Class Selector.</p>
+    
+    <p>Paragraf ketiga, normal.</p>
+    
+    <a href="#">Link Navigasi</a> | 
+    <a href="#" class="highlight">Link Penting</a>
+
+    <br><br>
+
+    <h3>Studi Kasus: Kartu Produk</h3>
+    
+    <div class="product-card">
+        <h2>Laptop Gaming Terbaru</h2>
+        <p>Performa luar biasa untuk gaming dan multitasking.</p>
+        <p class="price" id="diskon">Rp 15.000.000</p>
+    </div>
+
+    <div class="product-card">
+        <h2>Mouse Ergonomis</h2>
+        <p>Nyaman digunakan untuk sesi kerja panjang.</p>
+        <p class="price">Rp 500.000</p>
+    </div>
+
+    <hr>
+
+    <h3>Praktikum Box Model</h3>
+
+    <div class="box">Kotak A (Box Model)</div>
+    <div class="box">Kotak B (Box Model)</div>
+
+    <p><strong>Tes Display:</strong></p>
+    <span>Item Inline 1</span>
+    <span>Item Inline 2</span>
+    
+    <div class="inline-box">Inline-Block A</div>
+    <div class="inline-box">Inline-Block B</div>
+
+    <h3>Studi Kasus: Navigasi Horizontal</h3>
+    <ul class="nav-menu">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Produk</a></li>
+        <li><a href="#">Kontak</a></li>
+    </ul>
+
+    <hr>
+
+    <h3>Praktikum Pseudo-class (Interaksi)</h3>
+
+    <div class="interaktif-box">Arahkan Kursor Ke Sini (Hover Me!)</div>
+    
+    <br>
+
+    <div class="link-container">
+        <a href="https://example.com/new-unique-url" class="nav-link" target="_blank">Link Baru (Unvisited)</a>
+        <a href="#" class="nav-link">Link Lama (Visited)</a>
+    </div>
+
+    <br><br>
+
+    <h3>Studi Kasus: Tombol Menu</h3>
+    <button class="cta-button">Pesan Sekarang</button>
+    
+    <br><br><br>
+</body>
+</html>
