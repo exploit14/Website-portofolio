@@ -278,3 +278,22 @@ footer { text-align: center; padding: 40px; border-top: 1px solid #222; color: #
 /* Animasi Scroll (Hidden) */
 .hidden { opacity: 0; transform: translateY(50px); transition: all 1s ease; }
 .show { opacity: 1; transform: translateY(0); }
+/* B. MENU UTAMA */
+.main-menu {
+    /* Kunci Flexbox: Membuat LI menu utama sejajar */
+    display: flex; 
+    list-style: none; /* Hilangkan bullet */
+/* --- Styling CTA Button --- */
+.cta-button {
+    /* Gaya Visual */
+    background-color: #e74c3c; /* Warna Merah Kontras */
+    color: white;
+    font-weight: bold;
+    
+    /* Ukuran dan Bentuk */
+    padding: 8px 15px; /* Jarak di dalam tombol */
+    border-radius: 5px; /* Sudut membulat */
+    
+    /* Efek Hover */
+    transition: background-color 0.3s ease;
+}
