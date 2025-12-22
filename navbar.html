@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Navbar Lengkap</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="my-logo.png" alt="Logo Perusahaan" class="logo-img"> 
+            </a>
+        </div>
+
+        <ul class="main-menu">
+            <li><a href="index.html">🏠 Home</a></li> 
+
+            <li class="dropdown-parent"> 
+                <a href="#">Produk 👇</a>
+                <ul class="submenu"> 
+                    <li><a href="#">Kategori A</a></li>
+                    <li><a href="#">Kategori B</a></li>
+                    <li><a href="#">Kategori C</a></li>
+                </ul>
+            </li>
+
+            <li><a href="services.html">🛠️ Services</a></li> 
+
+            <li><a href="#" class="nav-link active">📞 Contact</a></li> 
+        </ul>
+
+        <div class="nav-cta">
+            <a href="#daftar" class="cta-button">
+                Daftar Sekarang!
+            </a> 
+        </div>
+    </nav>
+
+    <main>
+        <div style="padding: 20px;">
+            <h1>Selamat Datang di Website Kami!</h1> 
+            <p>Arahkan kursor ke menu "Produk" untuk melihat dropdown.</p>
+            <p>Gulir ke bawah untuk melihat efek Fixed Navbar.</p>
+            
+            <div style="height: 1200px; background-color: #ecf0f1; padding: 20px; margin-top: 20px;">
+                <p>Konten panjang untuk pengujian scroll...</p> 
+                <p>Perhatikan bahwa Navbar tetap menempel di atas (Fixed Position).</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
