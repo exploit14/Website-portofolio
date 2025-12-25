@@ -2,23 +2,78 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title> Daftar Tugas </title>
+    <title>Daftar Tugas</title>
 
     <style>
+        /* RESET SEDERHANA */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f3e7ff, #e0c3fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* CARD UTAMA */
+        .menu-tugas {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 16px;
+            width: 320px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .menu-tugas h1 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #4a0072;
+        }
+
+        /* TOMBOL */
         .cta-button {
-            color: purple !important;
+            display: block;
+            margin: 15px 0;
+            padding: 14px;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(155, 89, 182, 0.5);
+            background: linear-gradient(135deg, #8e44ad, #732d91);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 400px) {
+            .menu-tugas {
+                width: 90%;
+                padding: 25px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="menu-tugas" >
-        
+
+    <div class="menu-tugas">
+        <h1>📚 Daftar Tugas</h1>
+
         <a href="/Website-portofolio/formulir.html" class="cta-button">
             Tugas Formulir
         </a>
 
-
-   
         <a href="/Website-portofolio/navbar.html" class="cta-button">
             Tugas Navbar
         </a>
@@ -26,15 +81,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
